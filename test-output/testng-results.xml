@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-01-07T03:45:30Z" name="Sample test Suite" finished-at="2020-01-07T03:45:50Z" duration-ms="19652">
+    <groups>
+    </groups>
+    <test started-at="2020-01-07T03:45:30Z" name="Sample test" finished-at="2020-01-07T03:45:50Z" duration-ms="19652">
+      <class name="com.training.sanity.tests.LoginTests">
+        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.LoginTests@5ad851c9]" started-at="2020-01-07T03:45:30Z" name="setUpBeforeClass" finished-at="2020-01-07T03:45:30Z" duration-ms="40" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.training.sanity.tests.LoginTests@5ad851c9]" started-at="2020-01-07T03:45:30Z" name="setUp" finished-at="2020-01-07T03:45:44Z" duration-ms="13212" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validLoginTest()[pri:0, instance:com.training.sanity.tests.LoginTests@5ad851c9]" started-at="2020-01-07T03:45:44Z" name="validLoginTest" finished-at="2020-01-07T03:45:47Z" duration-ms="3653" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.training.sanity.tests.LoginTests@5ad851c9]" started-at="2020-01-07T03:45:47Z" name="tearDown" finished-at="2020-01-07T03:45:50Z" duration-ms="2693" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.training.sanity.tests.LoginTests -->
+    </test> <!-- Sample test -->
+  </suite> <!-- Sample test Suite -->
+</testng-results>
