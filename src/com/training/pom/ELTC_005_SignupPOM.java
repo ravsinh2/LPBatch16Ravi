@@ -1,7 +1,12 @@
 package com.training.pom;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -49,7 +54,7 @@ private WebDriver driver;
 	private WebElement register;
 	
 
-	public void teacherSignup() throws InterruptedException {
+	public void teacherSignup() throws InterruptedException, AWTException {
 		this.signup.click();
 		Thread.sleep(1000);
 		this.firstname.sendKeys("manzoor");
@@ -69,8 +74,13 @@ private WebDriver driver;
 		this.language.click();
 		Thread.sleep(1000);
 		
-		Select sel =new Select(this.language);
-		sel.selectByVisibleText("English");
+		//Select sel =new Select(this.language);
+		//sel.selectByVisibleText("English");
+		
+		Robot robo =new Robot();
+		robo.keyPress(KeyEvent.VK_ENTER);
+		
+		
 		
 		Thread.sleep(3000);
 		this.teachCoursesClick.click();

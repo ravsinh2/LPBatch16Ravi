@@ -1,5 +1,6 @@
 package com.training.sanity.tests;
 
+import java.awt.AWTException;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -54,7 +55,7 @@ public class ELTC_005_SignupTests
 //}
 	
 	@Test
-	public void SignupTest() throws InterruptedException {
+	public void SignupTest() throws InterruptedException, AWTException {
 		signupPOM.teacherSignup();
 		 
 		screenShot.captureScreenShot("First");
