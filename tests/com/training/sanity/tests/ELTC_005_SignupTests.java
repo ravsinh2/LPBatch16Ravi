@@ -13,15 +13,18 @@ import org.testng.annotations.Test;
 import com.training.generics.ScreenShot;
 import com.training.pom.HomePOM;
 import com.training.pom.LoginPOM;
+import com.training.pom.ELTC_005_SignupPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class LoginTests {
+public class ELTC_005_SignupTests 
+{
 
 	private WebDriver driver;
 	private String baseUrl;
 	private LoginPOM loginPOM;
 	private HomePOM homepom;
+	private ELTC_005_SignupPOM signupPOM;
 	private static Properties properties;
 	private ScreenShot screenShot;
 
@@ -37,27 +40,25 @@ public class LoginTests {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		loginPOM = new LoginPOM(driver); 
 		homepom = new HomePOM(driver); 
+		signupPOM = new ELTC_005_SignupPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
 		driver.get(baseUrl);
 	}
 	
-	@AfterMethod
-	public void tearDown() throws Exception {
-		Thread.sleep(1000);
-		driver.quit();
-}
+	//@AfterMethod
+	//public void tearDown() throws Exception {
+		//Thread.sleep(1000);
+		//driver.quit();
+//}
 	
 	@Test
-	public void validLoginTest() {
-		loginPOM.sendUserName("admin");
-		loginPOM.sendPassword("admin@123");
-		loginPOM.clickLoginBtn(); 
+	public void SignupTest() throws InterruptedException {
+		signupPOM.teacherSignup();
+		 
 		screenShot.captureScreenShot("First");
 		
 	}
-	
-	
 	
 }
